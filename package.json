@@ -1,0 +1,20 @@
+{
+  "name": "dissonance",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "server:dev": "bun run --watch index.ts",
+    "server": "bun run index.ts",
+    "deploy": "bun run deploy.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "discord.js": "^14.13.0",
+    "tslog": "^4.9.2"
+  }
+}
