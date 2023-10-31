@@ -1,11 +1,9 @@
-import { Client, Events, GatewayIntentBits } from 'discord.js'
+import { Events } from 'discord.js'
 import { commands } from './commands'
 import logger from './utils'
+import { client } from './discord'
 
 
-const client = new Client({
-  intents: [GatewayIntentBits.Guilds]
-})
 
 client.once(Events.ClientReady, (c) => {
   logger.info(`Logged in as ${c.user.tag}`)

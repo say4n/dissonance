@@ -1,6 +1,6 @@
-import { ChatInputCommandInteraction, SlashCommandBuilder } from "discord.js"
+import { ChatInputCommandInteraction } from "discord.js"
 
 export type Command = {
-  metadata: SlashCommandBuilder,
+  metadata: any,
   callback: (_: ChatInputCommandInteraction) => void
 }
