@@ -1,6 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, ForumChannel } from 'discord.js'
 import { Command } from '../command.model'
 import { client } from '../discord'
+import logger from '../utils'
 
 export const deleteCommand: Command = {
   metadata: new SlashCommandBuilder()
@@ -20,9 +21,16 @@ export const deleteCommand: Command = {
 
     const messages = await channel.messages.fetch({ limit: nMessages });
 
-    messages.forEach(async message =>
-      await message.delete()
-    )
+    messages.forEach(async message => {
+      logger.silly(`Deleting ${message.id}`)
+
+      try {
+        await message.react("🚮")
+        await message.delete()
+      } catch (e: any) {
+        logger.error(`Can't delete ${message.id}`, e)
+      }
+    })
 
     interaction.reply({
       content: `Deleted ${nMessages} messages.`,
