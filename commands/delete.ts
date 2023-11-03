@@ -27,7 +27,7 @@ export const deleteCommand: Command = {
       try {
         await message.react("🚮")
         await message.delete()
-      } catch (e: any) {
+      } catch (e: unknown) {
         logger.error(`Can't delete ${message.id}`, e)
       }
     })
