@@ -1,7 +1,7 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction, ForumChannel } from 'discord.js'
-import { Command } from '../command.model'
-import { client } from '../discord'
-import logger from '../utils'
+import { Command } from '../command.model.ts'
+import { client } from '../discord.ts'
+import { logger } from '../utils.ts'
 
 export const deleteCommand: Command = {
   metadata: new SlashCommandBuilder()

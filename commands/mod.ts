@@ -1,7 +1,7 @@
 import { Collection } from "discord.js"
-import { Command } from "../command.model"
-import { pingCommand } from "./ping"
-import { deleteCommand } from "./delete"
+import { Command } from "../command.model.ts"
+import { pingCommand } from "./ping.ts"
+import { deleteCommand } from "./delete.ts"
 
 const commandList = [
   pingCommand,

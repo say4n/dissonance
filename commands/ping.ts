@@ -1,5 +1,5 @@
 import { SlashCommandBuilder, ChatInputCommandInteraction } from 'discord.js'
-import { Command } from '../command.model'
+import { Command } from '../command.model.ts'
 
 export const pingCommand: Command = {
   metadata: new SlashCommandBuilder()
