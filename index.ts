@@ -2,7 +2,7 @@ import { Events } from "discord.js";
 import { commands } from "./commands/mod.ts";
 import { logger } from "./utils.ts";
 import { client } from "./discord.ts";
-import { load } from "https://deno.land/std@0.205.0/dotenv/mod.ts";
+import { load } from "dotenv";
 
 const env = await load();
 

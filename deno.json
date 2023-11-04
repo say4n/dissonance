@@ -1,6 +1,7 @@
 {
   "imports": {
     "discord.js": "npm:discord.js@^14.13.0",
+    "dotenv": "https://deno.land/std@0.205.0/dotenv/mod.ts",
     "node-html-parser": "npm:node-html-parser@^6.1.11",
     "tslog": "npm:tslog@^4.9.2",
     "turndown": "npm:turndown@^7.1.2",
