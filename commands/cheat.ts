@@ -32,9 +32,10 @@ export const cheatCommand: Command = {
     await interaction.deferReply({ ephemeral: true });
 
     const query = interaction.options.getString("query") || "";
-    const cheatsheet = await (fetchCheatsheet(query))
+    const cheatsheet = (await (fetchCheatsheet(query)))
+      .substring(0, 2000) // Discord has a 2000 character message limit.
 
-    await interaction.reply({
+    await interaction.followUp({
       content: cheatsheet,
       ephemeral: true,
     })
