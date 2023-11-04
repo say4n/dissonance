@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "discord.js": "npm:discord.js@^14.13.0",
+    "node-html-parser": "npm:node-html-parser@^6.1.11",
+    "tslog": "npm:tslog@^4.9.2",
+    "turndown": "npm:turndown@^7.1.2",
+    "@types/turndown": "npm:@types/turndown@^5.0.3"
+  },
+  "tasks": {
+    "server": "deno run --allow-read --allow-sys --allow-net --allow-env index.ts",
+    "server:dev": "deno run --watch --allow-read --allow-sys --allow-net --allow-env index.ts",
+    "deploy": "deno run --allow-read --allow-sys --allow-net --allow-env deploy.ts"
+  }
+}
