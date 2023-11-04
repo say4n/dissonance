@@ -12,6 +12,7 @@ export const listCommand: Command = {
       content:
         "Supported commands are:\n\n" +
         commands.map((c) => `**${c.metadata.name}**: ${c.metadata.description}`).join("\n"),
+      ephemeral: true,
     });
   },
 };

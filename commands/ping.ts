@@ -10,6 +10,7 @@ export const pingCommand: Command = {
     const delta = Date.now() - interaction.createdTimestamp;
     await interaction.reply({
       content: `Pong! **${delta}** ms`,
+      ephemeral: true,
     });
   },
 };
